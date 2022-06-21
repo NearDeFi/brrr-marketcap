@@ -21,11 +21,11 @@ jobs:
       - name: Show stats
         run: node marketcap
       - name: Update stats
-        run: node marketcap > brrr-stats.json        
-      - name: Commit and push changes
+        run: node marketcap > brrr-stats.json              
       - uses: EndBug/add-and-commit@v9 
         with: 
           author_name: "Brrr Stats"
           author_email: "support@zavodil.ru"
+          add: 'brrr-stats.json --force'
           message: "Stats fetching"
           pull: '--rebase --autostash ...'
