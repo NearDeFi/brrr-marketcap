@@ -1,0 +1,22 @@
+{
+  "name": "brrr-marketcap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "marketcap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zavodil/brrr-marketcap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zavodil/brrr-marketcap/issues"
+  },
+  "homepage": "https://github.com/zavodil/brrr-marketcap#readme",
+  "dependencies": {
+    "near-api-js": "^0.45.1"
+  }
+}
