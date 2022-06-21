@@ -23,8 +23,9 @@ jobs:
       - name: Update stats
         run: node marketcap > brrr-stats.json        
       - name: Commit and push changes
-        run: |          
-          git config --global user.name "GitHub Action"
-          git config --global user.email "support@zavodil.ru"
-          git add brrr-stats.json
-          git commit -m "Stats fetching"
+      - uses: EndBug/add-and-commit@v9 
+        with: 
+          author_name: "Brrr Stats"
+          author_email: "support@zavodil.ru"
+          message: "Stats fetching"
+          pull: '--rebase --autostash ...'
