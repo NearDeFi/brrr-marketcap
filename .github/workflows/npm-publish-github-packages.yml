@@ -28,4 +28,3 @@ jobs:
           author_email: "support@zavodil.ru"
           add: 'brrr-stats.json --force'
           message: "Stats fetching"
-          pull: '--rebase --autostash ...'
