@@ -9,7 +9,7 @@ on:
     - cron:  '*/5 * * * *'
 
 jobs:
-  build:
+  updateStats:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,12 +18,14 @@ jobs:
         with:
             node-version: 16
       - run: npm i      
+      - name: Show stats
+        run: node marketcap
       - name: Update stats
-        run: node marketcap > brrr-stats.json
+        run: node marketcap > brrr-stats.json        
       - name: Commit and push changes
         run: |-
           git diff
-          git config user.name "Automated"
+          git config --global user.name "GitHub Action"
           git config user.email "actions [at] users.noreply [dot] github.com"
-          git diff --quiet || (git add -A && git commit -m "Updated with latest")
-          git push
+          git add brrr-stats.json
+          git commit -m "Stats fetching"
