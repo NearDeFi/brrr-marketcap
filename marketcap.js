@@ -2,9 +2,12 @@ const {getConfig} = require('./near');
 const nearAPI = require('near-api-js');
 
 const config = getConfig(process.env.NODE_ENV || 'production');
-const brrrLockedHolders = ['lockup.burrow.near', 'burrow.sputnik-dao.near'];
+
+// token account  
 let brrrToken = 'token.burrow.near';
-// 1 billion
+// set all accounts with locked tokens
+const brrrLockedHolders = ['lockup.burrow.near', 'burrow.sputnik-dao.near'];
+// token max supply
 const maxSupply = Math.pow(10, 9);
 
 const getTokenPrice = async (tokenId) => {
