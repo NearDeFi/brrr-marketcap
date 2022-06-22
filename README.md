@@ -1,4 +1,4 @@
-# Token statistics for native NEAR tokens
+# Token statistics for NEAR native tokens
 
 An example with a github action and a simple node.js script to calculate circulating supply, market cap, etc. It creates a json file for services like `coingecko` or `coinmarketcap`.
 
