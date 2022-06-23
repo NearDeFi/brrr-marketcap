@@ -27,7 +27,7 @@ const updateMarketcap = async () => {
         lastUpdate: 0
     }
 
-    let tokenPrice = await getTokenPrice("token.burrow.near");
+    let tokenPrice = await getTokenPrice(brrrToken);
     const near = await nearAPI.connect(config);
 
     const lockedBalances = await Promise.all(
