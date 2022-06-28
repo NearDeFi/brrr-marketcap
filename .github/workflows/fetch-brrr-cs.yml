@@ -6,7 +6,7 @@ on:
 
 
 env:  
-  EXPORT_MODE: "CS"   
+  EXPORT_MODE: CS   
 
 jobs:
   updateStats:
