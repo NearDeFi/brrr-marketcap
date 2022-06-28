@@ -1,0 +1,28 @@
+name: Fetch Brrr Circulating Supply
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '*/10 * * * *'
+
+
+env:  
+  EXPORT_MODE: "CS"   
+
+jobs:
+  updateStats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Prepare        
+        uses: actions/setup-node@v3
+        with:
+            node-version: 16
+      - run: npm i      
+      - name: Update Circulating Supply
+        run: node marketcap > brrr-cs.json              
+      - uses: EndBug/add-and-commit@v9 
+        with: 
+          author_name: "Brrr Circulating Supply Updater"
+          author_email: "support@zavodil.ru"
+          add: 'brrr-cs.json --force'
+          message: "Circulating Supply fetching"
