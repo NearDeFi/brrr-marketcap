@@ -4,10 +4,6 @@ on:
   schedule:
     - cron:  '*/10 * * * *'
 
-
-env:  
-  EXPORT_MODE: CS   
-
 jobs:
   updateStats:
     runs-on: ubuntu-latest
@@ -20,6 +16,8 @@ jobs:
       - run: npm i      
       - name: Update Circulating Supply
         run: node marketcap > brrr-cs.json              
+        env:
+          EXPORT_MODE: CS
       - uses: EndBug/add-and-commit@v9 
         with: 
           author_name: "Brrr Circulating Supply Updater"
