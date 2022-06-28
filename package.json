@@ -4,6 +4,8 @@
   "description": "",
   "main": "marketcap.js",
   "scripts": {
+    "get": "node marketcap",
+    "get-cs": "export EXPORT_MODE=CS && node marketcap",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

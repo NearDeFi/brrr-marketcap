@@ -2,7 +2,7 @@ const {getConfig} = require('./near');
 const nearAPI = require('near-api-js');
 
 const config = getConfig(process.env.NODE_ENV || 'production');
-const mode = getConfig(process.env.EXPORT_MODE || 'JSON');
+const mode = process.env.EXPORT_MODE || 'JSON';
 
 // token account  
 let brrrToken = 'token.burrow.near';
@@ -54,7 +54,7 @@ const updateMarketcap = async () => {
     return(marketCap);
 }
 
-updateMarketcap().then((marketCap)=> {    
+updateMarketcap().then((marketCap)=> {
     if (mode === "JSON"){
         console.log(marketCap)
     }
