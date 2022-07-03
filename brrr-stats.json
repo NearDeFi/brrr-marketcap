@@ -3,14 +3,14 @@
     {
       address: 'lockup.burrow.near',
       balance: 95000000,
-      value: 927629.4
+      value: 927450.7999999999
     },
     {
       address: 'burrow.sputnik-dao.near',
       balance: 851206213,
-      value: 8311620.09096276
+      value: 8310019.823282319
     }
   ],
   circulatingSupply: 53793787,
-  lastUpdate: 1656836632086
+  lastUpdate: 1656837790188
 }
