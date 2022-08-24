@@ -21,6 +21,5 @@ jobs:
       - uses: EndBug/add-and-commit@v9 
         with: 
           author_name: "Brrr Circulating Supply Updater"
-          author_email: "support@zavodil.ru"
           add: 'brrr-cs.json --force'
           message: "Circulating Supply fetching"
