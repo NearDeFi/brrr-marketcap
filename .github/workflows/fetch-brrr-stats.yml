@@ -20,6 +20,5 @@ jobs:
       - uses: EndBug/add-and-commit@v9 
         with: 
           author_name: "Brrr Stats Updater"
-          author_email: "support@zavodil.ru"
           add: 'brrr-stats.json --force'
           message: "Stats fetching"
