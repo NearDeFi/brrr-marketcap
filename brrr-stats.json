@@ -2,7 +2,7 @@
   lockedBalances: [
     {
       address: 'lockup.burrow.near',
-      balance: 69924892.8050482,
+      balance: 69319425.08561644,
       value: 0
     },
     {
@@ -11,6 +11,6 @@
       value: 0
     }
   ],
-  circulatingSupply: 553392626.1949518,
-  lastUpdate: 1698269325031
+  circulatingSupply: 553998093.9143835,
+  lastUpdate: 1698270055730
 }
