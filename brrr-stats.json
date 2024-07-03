@@ -7,10 +7,10 @@
     },
     {
       address: 'burrow.sputnik-dao.near',
-      balance: 331720160.01000696,
+      balance: 333838338.1706677,
       value: 0
     }
   ],
-  circulatingSupply: 601273704.4940519,
-  lastUpdate: 1719993565208
+  circulatingSupply: 599155526.3333912,
+  lastUpdate: 1719995184144
 }
